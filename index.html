@@ -14,18 +14,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loading-screen">
+        <div class="banter-loader">
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+        </div>
+    </div>
     <header>
         <div class="social-icons">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="#" aria-label="GitHub" class="github-link"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Instagram" class="ig-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Behance" class="behance-link"><i class="fab fa-behance"></i></a>
         </div>
         <nav>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Testimonials</a></li>
+                <li><a href="#about-me-section">About Me</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#work-section">Work</a></li>
+                <li><a href="#testimonials-section">Testimonials</a></li>
             </ul>
         </nav>
         <div class="theme-toggle">
@@ -59,7 +72,7 @@
         </div>
     </main>
 
-    <section class="about-section-container">
+    <section class="about-section-container" id="about-me-section">
         <div class="about-me-title">
             <i class="fas fa-star"></i> About Me
         </div>
@@ -73,7 +86,7 @@
         </a>
     </section>
 
-    <section class="services-section">
+    <section class="services-section" id="services-section">
         <div class="services-header">
           <div class="services-title">
             <i class="fas fa-star"></i> Services
@@ -83,42 +96,10 @@
         </div>
       
         <div class="services-grid">
-          <div class="service-card">
-            <div class="card-header">
-                <i class="fas fa-star"></i> Web Development
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-            <div class="card-tags">
-                <span class="tag">CODING</span>
-                <span class="tag">DEVELOPMENT</span>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="card-header">
-                <i class="fas fa-star"></i> Web Development
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-            <div class="card-tags">
-                <span class="tag">CODING</span>
-                <span class="tag">DEVELOPMENT</span>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="card-header">
-                <i class="fas fa-star"></i> Web Development
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-            <div class="card-tags">
-                <span class="tag">CODING</span>
-                <span class="tag">DEVELOPMENT</span>
-            </div>
-          </div>
         </div>
     </section>
 
-    <section class="work-section">
+    <section class="work-section" id="work-section">
         <div class="work-header">
           <div class="work-title">
             <i class="fas fa-star"></i> My Work
@@ -128,25 +109,11 @@
         </div>
       
         <div class="work-grid">
-          <div class="work-card">
-            
-          </div>
-      
-          <div class="work-card">
-            
-          </div>
-
-          <div class="work-card">
-            
-          </div>
-      
-          <div class="work-card">
-            
-          </div>
+          
         </div>
     </section>
 
-    <section class="testimonials-section">
+    <section class="testimonials-section" id="testimonials-section">
         <div class="testimonials-header">
           <div class="testimonials-title">
             <i class="fas fa-star"></i> Testimonials
@@ -156,80 +123,11 @@
         </div>
         
         <div class="clients-pictures">
-            <div class="pic-1">
-
-            </div>
-            <div class="pic-2">
-
-            </div>
-            <div class="pic-3">
-
-            </div>
-            <div class="pic-4">
-
-            </div>
-            <div class="pic-5">
-
-            </div>
+            
         </div>
 
         <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <i class="fas fa-star"></i>
-                <div class="client-info">
-                    <img>
-                    <div>
-                        <span>Lorem Ipsum</span>
-                        <small>Lorem Ipsum</small>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-      
-            <div class="testimonial-card">
-                <i class="fas fa-star"></i>
-                <div class="client-info">
-                    <img>
-                    <div>
-                        <span>Lorem Ipsum</span>
-                        <small>Lorem Ipsum</small>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-      
-            <div class="testimonial-card">
-                <i class="fas fa-star"></i>
-                <div class="client-info">
-                    <img>
-                    <div>
-                        <span>Lorem Ipsum</span>
-                        <small>Lorem Ipsum</small>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet consectetur incididunt ut labore et dolore magna ali</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -239,5 +137,6 @@
             <a href="#" target="_blank">Aziz Berhouma</a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
