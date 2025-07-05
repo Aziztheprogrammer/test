@@ -831,6 +831,7 @@ main .left-section .cta a:hover> svg {
 
     main {
       flex-direction: column-reverse;
+      align-items: flex-start;
     }
 
     main .right-section {
@@ -850,7 +851,7 @@ main .left-section .cta a:hover> svg {
     }
 
     main .right-section .name-tag > h1 {
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     main .right-section .name-tag > h1 i {
