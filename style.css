@@ -718,6 +718,10 @@ main .right-section .name-tag > span {
     font-style: italic;
 }
 
+main .right-section .cta-mobile {
+  display: none;
+}
+
 main .left-section .hero-section-slogan {
     font-weight: 600;
     line-height: 1.1;
@@ -746,7 +750,12 @@ main .left-section .cta {
   position: relative;
 }
 
-main .left-section .cta::after {
+main .right-section .cta-mobile {
+  position: relative;
+}
+
+main .left-section .cta::after,
+main .right-section .cta-mobile::after {
   content: "";
   background-color: #666;
   position: absolute;
@@ -758,11 +767,13 @@ main .left-section .cta::after {
   transition: width 0.3s ease-in-out;
 }
 
-main .left-section .cta:hover::after {
+main .left-section .cta:hover::after,
+main .right-section .cta-mobile:hover::after {
   width: 110%;
 }
 
-main .left-section .cta a {
+main .left-section .cta a,
+main .right-section .cta-mobile a {
     font-size: 1rem;
     text-decoration: none;
     color: #666;
@@ -771,14 +782,16 @@ main .left-section .cta a {
     align-items: center;
 }
 
-main .left-section .cta a > svg {
+main .left-section .cta a > svg,
+main .right-section .cta-mobile a > svg {
     width: auto;
     height: 16px;
     transform: rotate(45deg);
     transition: 0.3s ease-in-out all;
 }
 
-main .left-section .cta a:hover> svg {
+main .left-section .cta a:hover > svg,
+main .right-section .cta-mobile a:hover > svg {
   transform: rotate(90deg);
 }
 
@@ -836,10 +849,15 @@ main .left-section .cta a:hover> svg {
 
     main .right-section {
       justify-content: flex-end;
+      gap: 56px;
     }
 
     main .right-section nav {
       display: none;
+    }
+
+    main .right-section .cta-mobile {
+      display: block;
     }
 
     main .left-section .hero-section-slogan {
