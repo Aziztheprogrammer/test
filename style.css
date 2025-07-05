@@ -627,6 +627,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+main .right-section {
+  animation: swipe-right 2s ease 1;
+}
+
+main .left-section {
+  animation: swipe-left 2s ease 1;
 }
 
 main > section {
@@ -767,8 +776,7 @@ main .right-section .cta-mobile::after {
   transition: width 0.3s ease-in-out;
 }
 
-main .left-section .cta:hover::after,
-main .right-section .cta-mobile:hover::after {
+main .left-section .cta:hover::after {
   width: 110%;
 }
 
@@ -790,9 +798,42 @@ main .right-section .cta-mobile a > svg {
     transition: 0.3s ease-in-out all;
 }
 
-main .left-section .cta a:hover > svg,
-main .right-section .cta-mobile a:hover > svg {
+main .left-section .cta a:hover > svg {
   transform: rotate(90deg);
+}
+
+main .right-section .cta-mobile a > svg {
+  animation: scroll 2s ease 2 alternate-reverse 2s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: rotate(45deg);
+  } 25% {
+    transform: rotate(90deg);
+  } 50% {
+    transform: rotate(90deg) translateX(-5px);
+  } 75% {
+    transform: rotate(90deg) translateX(5px);
+  } 100% {
+    transform: rotate(45deg) translateX(0px);
+  }
+}
+
+@keyframes swipe-left {
+  from {
+    transform: translateX(100%);
+  } to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes swipe-right {
+  from {
+    transform: translateX(-100%);
+  } to {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes star-roll {
