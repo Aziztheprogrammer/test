@@ -622,7 +622,7 @@ main {
     box-sizing: border-box;
     flex-grow: 1;
     text-align: center;
-    height: calc(100vh - 69.6px);
+    height: calc(100dvh - 69.6px);
     padding: 64px min(64px, 10vw);
     display: flex;
     align-items: center;
