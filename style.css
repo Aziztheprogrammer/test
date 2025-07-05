@@ -565,7 +565,7 @@ header {
     margin-right: 0;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -573,24 +573,24 @@ nav ul {
     align-items: center;
 }
 
-nav ul li {
+header nav ul li {
     padding: 24px 8px;
     margin-left: min(42px, 5vw);
     transition: all 0.3s ease;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     transition: all 0.3s ease;
 }
 
 
-nav ul li:hover {
+header nav ul li:hover {
     background-color: var(--second-color);
 }
 
-nav ul li:hover a {
+header nav ul li:hover a {
     color: #f8f0fa;
 }
 
@@ -619,84 +619,192 @@ nav ul li:hover a {
 }
 
 main {
+    box-sizing: border-box;
     flex-grow: 1;
     text-align: center;
-    padding: 0px min(64px, 10vw);
+    height: calc(100vh - 69.6px);
+    padding: 64px min(64px, 10vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.hero-content {
-    position: relative;
+main > section {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+main .right-section nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+main .right-section nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    text-decoration: none;
+}
+
+main .right-section nav ul li {
+  width: fit-content;
+  position: relative;
+}
+
+main .right-section nav ul li::after {
+  content: "";
+  background-color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 1px;
+  transition: width 0.3s ease-in-out;
+}
+
+main .right-section nav ul li:hover::after {
+  width: 110%;
+}
+
+main .right-section nav ul a:hover > svg {
+    transform: rotate(90deg);
+}
+
+main .right-section nav ul a svg {
+    width: auto;
+    height: 16px;
+    transform: rotate(45deg);
+    transition: 0.3s all ease-in-out;
+}
+
+main .right-section .name-tag > h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+
+main .right-section .name-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .right-section .name-tag > h1 > span {
+    display: flex;
+    gap: 8px;
     align-items: center;
 }
 
-.hero-content h1 {
-    font-family: 'Poppins', sans-serif;
-    margin-top: 48px;
-    margin-bottom: 16px;
-    font-size: 3.5rem;
+main .right-section .name-tag > h1 i {
+    transform: rotate(45deg);
+    font-size: 2.5rem;
+    color: var(--second-color);
+    animation: star-roll 2s infinite ease alternate;
+}
+
+main .right-section .name-tag > span {
+    text-align: left;
+    color: #666;
+    font-style: italic;
+}
+
+main .left-section .hero-section-slogan {
     font-weight: 600;
     line-height: 1.1;
-    max-width: min(840px, 80vw);
-    /* Gradient Color */
-    /** Text Gradient Example */ 
-    color: var(--second-color); 
-    background-image: linear-gradient(45deg, #1A0639 , #3C0A6B , #6A139E , #A11ACF , #E324FF ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    text-transform: uppercase;
+    text-align: right;
+    max-width: 450px;
+    font-size: 3.5rem;
 }
 
-.hero-content p {
-    line-height: 1.2;
-    font-size: 1rem;
-    color: var(--light-text-color);
-    max-width: min(840px, 80vw);
-    margin-bottom: 48px;
-}
-
-.navigation-arrows {
+main .left-section .hero-section-slogan > span {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: min(960px, 80vw);
-    margin: 48px auto 0px auto;
-    padding: 16px 0px;
-}
-
-.navigation-arrows a {
-    text-decoration: none;
-    color: var(--text-color);
-    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
     align-items: center;
-    transition: color 0.3s ease;
 }
 
-.navigation-arrows a:hover {
+main .left-section .hero-section-slogan > span i {
+    transform: rotate(45deg);
+    font-size: 2.5rem;
     color: var(--second-color);
+    animation: star-roll 2s infinite ease alternate;
 }
 
-.navigation-arrows a svg {
-    height: 24px;
+main .left-section .cta {
+  align-self: flex-end;
+  position: relative;
+}
+
+main .left-section .cta::after {
+  content: "";
+  background-color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 1px;
+  transition: width 0.3s ease-in-out;
+}
+
+main .left-section .cta:hover::after {
+  width: 110%;
+}
+
+main .left-section .cta a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #666;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+main .left-section .cta a > svg {
     width: auto;
+    height: 16px;
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out all;
 }
 
-.navigation-arrows .left-arrow svg {
-    margin-right: 8px;
-    margin-left: 0;
+main .left-section .cta a:hover> svg {
+  transform: rotate(90deg);
 }
 
-.navigation-arrows .right-arrow svg {
-    margin-left: 8px;
-    margin-right: 0;
+@keyframes star-roll {
+    form {
+        transform: rotate(45deg);
+    } to {
+        transform: rotate(225deg);
+    }
 }
 
 @media (max-width: 992px) {
-    .hero-content h1 {
-        font-size: 3rem;
+    main .left-section .hero-section-slogan {
+      font-size: 3rem;
+    }
+
+    main .left-section .hero-section-slogan > span i {
+      font-size: 2rem;
+    }
+
+    main .right-section .name-tag > h1 {
+      font-size: 4.5rem;
+    }
+
+    main .right-section .name-tag > h1 i {
+      font-size: 2rem;
     }
 }
 
@@ -722,12 +830,35 @@ main {
     }
 
     main {
-        flex-grow: 0;
+      flex-direction: column-reverse;
     }
 
-    main .navigation-arrows {
-        margin: 0px auto 0px auto;
-        padding: 24px 48px;
+    main .right-section {
+      justify-content: flex-end;
+    }
+
+    main .right-section nav {
+      display: none;
+    }
+
+    main .left-section .hero-section-slogan {
+      font-size: 2.5rem;
+    }
+
+    main .left-section .hero-section-slogan > span i {
+      font-size: 1.5rem;
+    }
+
+    main .right-section .name-tag > h1 {
+      font-size: 4rem;
+    }
+
+    main .right-section .name-tag > h1 i {
+      font-size: 1.5rem;
+    }
+
+    main .left-section .cta {
+      display: none;
     }
 }
 
