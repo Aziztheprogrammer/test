@@ -3,182 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aziz Berhouma - Portfolio website</title>
+    <title>Document</title>
     <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="dGXRsO6NaR0Z4-VVCxfumpcQq_gUAduAdFjFiYPtqUQ" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
-    <header>
-        <div class="social-icons">
-            <a href="#" aria-label="GitHub" class="github-link"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Instagram" class="ig-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Behance" class="behance-link"><i class="fab fa-behance"></i></a>
+<body>
+    <!-- Start The Header -->
+     <header>
+        <div class="logo">
+            Sagesse
         </div>
         <nav>
             <ul>
-                <li><a href="#about-me-section">About Me</a></li>
-                <li><a href="#services-section">Services</a></li>
-                <li><a href="#work-section">Work</a></li>
-                <li><a href="#testimonials-section">Testimonials</a></li>
+                    <li>
+                        <a href="#">
+                            Activitées
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Clubs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Les Avis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
             </ul>
-            <div class="menu-button">
-                <button>
-                   <i class="fa-solid fa-bars"></i>
-                </button>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <div class="theme-toggle">
-            <input type = "checkbox" id = "theme-toggle">
-             <label for = "theme-toggle">
-                <i class="fas fa-moon moon-icon"></i>
-            </label>
+        <div class="social-links">
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
-    </header>
+     </header>
+    <!-- End The Header  -->
 
-    <main>
-        <section class="right-section">
-            <nav class="hero-links">
-                <ul>
-                    <li>
-                        <a href="#services-section">
-                                Services
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                    <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-                                </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#work-section">
-                                My Work
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                    <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-                                </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#testimonials-section">
-                                Testimonials
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                    <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-                                </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="name-tag">
+    <!-- Start The Main Section -->
+     <main class="section">
+        <div class="container">
+            <div class="content">
+                <div class="title">
+                    <span>Sagesse</span>, La Clée De Succés De Vos Enfants
+                </div>
+                <a href="#" class="link-button">
+                    En Savoir Plus
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <div class="stats">
+                    <div class="stat-1 stat">
+                        +200 Eléves
+                    </div>
+
+                    <div class="stat-2 stat">
+                        +10 Clubs
+                    </div>
+
+                    <div class="stat-3 stat">
+                        +7 Enseignants
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <i class="fa-solid fa-computer-mouse"></i>
+            </div>
+        </div>
+     </main>
+    <!-- End The Main Section -->
+
+    <!-- Start About Sagesse -->
+     <section class="a-propos-sagesse section">
+            <div class="section-header">
+                 <h1>
+                    C'est Quoi Sagesse ?
+                 </h1>
+                 <p>
+                    Sagesse évoque une ambiance où la connaissance et les valeurs morales s'entrelacent pour former des esprits éclairés. Notre établissement offre un cadre propice à l'épanouissement intellectuel et personnel, en harmonie avec la tradition et l'innovation.
+                 </p>
+            </div>
+            <div class="section-content">
+                <div class="image-1">
+                    <img src="./assets/images/test.jpg">
+                </div>
+                <div class="video">
+                    <button class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <video>
+                        <source src="./assets/videos/about-video.mp4">
+                    </video>
+                </div>
+                <div class="image-2">
+                    <img src="./assets/images/test.jpg">
+                </div>
+            </div>
+            <div class="section-link">
+                <a href="#" class="link-button">
+                    Plus D'informations
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+     </section>
+    <!-- End About Sagesse -->
+
+    <!-- Start Stats Section -->
+     <section class="stats section">
+        <div class="stat-1">
+            <span>
+                +200
+            </span> 
+            <p>
+                Eléves Qui Ont Essayé Sgaesse
+            </p>
+        </div>
+        <div class="stat-2">
+            <span>
+                +7
+            </span> 
+            <p>
+                Profs Expérimentés
+            </p>
+        </div>
+        <div class="stat-3">
+            <span>
+                +10
+            </span> 
+            <p>
+                Clubs Pour Une Variété D'Activitées
+            </p>
+        </div>
+     </section>
+    <!-- End Stats Section -->
+
+
+    <!-- Start Activities Section -->
+    <section class="activities section">
+        <div class="section-header">
+                 <h1>
+                    Les Activitées De Sagesse
+                 </h1>
+                 <p>
+                    Sagesse encourage la créativité et l'épanouissement à travers un large éventail d'activités. Sport, arts, clubs et excursions enrichissent l'expérience éducative, offrant aux élèves un équilibre entre travail et passion.
+                 </p>
+            </div>
+            <div class="section-content">
+                <div class="activity-card">
+                    <div class="activity-title">
+                        Activitée 1
+                    </div>
+                    <div class="activity-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea...
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-title">
+                        Activitée 2
+                    </div>
+                    <div class="activity-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea...
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-title">
+                        Activitée 3
+                    </div>
+                    <div class="activity-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea...
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-title">
+                        Activitée 4
+                    </div>
+                    <div class="activity-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea...
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Activities Section -->
+
+    <!-- Start Clubs Section -->
+    <section class="clubs section">
+        <div class="section-header">
                 <h1>
-                     <span>
-                        <i class="fas fa-star"></i> Aziz 
-                     </span>
-                     Berhouma
+                    Les Clubs De Sagesse
                 </h1>
-                <span>
-                    -- Web Development And Design
-                </span>
+                <p>
+                    Les clubs de Sagesse offrent aux élèves l'opportunité de cultiver leurs talents et de nouer des liens. Que ce soit en débat, musique ou sciences, chaque club est une aventure d'apprentissage et de partage.
+                </p>
             </div>
-            <div class="cta-mobile">
-                <a href="#about-me-section">
-                    Let's Get To Know Each Other
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                        <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-                    </svg>
+            <div class="section-content">
+                <div class="club-1 club">
+                    <div class="club-image">
+                        <img src="./assets/images/test.jpg" alt="Club Image">
+                    </div>
+                    <div class="club-desc">
+                        <h2>
+                            Club De Scratch
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="club-2 club">
+                    <div class="club-image">
+                        <img src="./assets/images/test.jpg" alt="Club Image">
+                    </div>
+                    <div class="club-desc">
+                        <h2>
+                            Club De Dessin
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="club-3 club">
+                    <div class="club-image">
+                        <img src="./assets/images/test.jpg" alt="Club Image">
+                    </div>
+                    <div class="club-desc">
+                        <h2>
+                            Club De Lecture
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-link">
+                <a href="#" class="link-button">
+                    D'autres Clubs
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
-        </section>
-        <section class="left-section">
-            <div class="hero-section-slogan">
-                <span>
-                    <i class="fas fa-star"></i> I CAN'T 
-                </span>
-                STOP FROM BEING CREATIVE
+    </section>
+    <!-- End Clubs Section -->
+
+    <!-- Start Profs De Sagesse -->
+    <section class="profs section">
+        <div class="section-header">
+            <h1>
+                Les Profs De Sagesse
+            </h1>
+            <p>
+                Nos professeurs à Sagesse sont des passionnés qui inspirent et guident. Experts dans leurs domaines, ils soutiennent chaque élève pour atteindre son plein potentiel. C'est l'excellence pédagogique au service de la réussite.
+            </p>
+        </div>
+        <div class="section-content">
+            <div class="prof">
+                <img src="./assets/images/test.jpg">
+                <div class="prof-info">
+                    Nom & Prénom
+                    <small>
+                        Enseignant
+                    </small>
+                </div>
             </div>
-            <div class="cta">
-                <a href="#about-me-section">
-                    Let's Get To Know Each Other
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                        <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-                    </svg>
-                </a>
+            <div class="prof">
+                <img src="./assets/images/test.jpg">
+                <div class="prof-info">
+                    Nom & Prénom
+                    <small>
+                        Enseignant
+                    </small>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <section class="about-section-container" id="about-me-section">
-        <div class="about-me-title">
-            <i class="fas fa-star"></i> About Me
-        </div>
-        <h2>Wanna Know More About Mohamed Aziz Berhouma ? Sure...</h1>
-        <p>I am a self-taught front-end web developer and an undergraduate student from Tunisia. I have a strong passion for problem-solving, web design, and web development. My focus is on delivering modern, clean, and bug-free websites using the latest web technologies. I strive to ensure that each project not only meets but exceeds client expectations, providing a seamless and professional user experience.</p>
-        <div class="technologies">
-
-        </div>
-        <a href="about-me.html" class="know-more">
-            Know More About Aziz
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-            </svg>
-        </a>
-    </section>
-
-    <section class="services-section" id="services-section">
-        <div class="services-header">
-          <div class="services-title">
-            <i class="fas fa-star"></i> Services
-          </div>
-          <h2>We Provide For You These Digital Services</h2>
-          <p>Our expertise spans the entire web development lifecycle. We partner with you to create digital solutions that not only look great but also deliver measurable results. Whether you need a brand-new website or an upgrade to your existing web page.</p>
-        </div>
-      
-        <div class="services-grid">
+            <div class="prof">
+                <img src="./assets/images/test.jpg">
+                <div class="prof-info">
+                    Nom & Prénom
+                    <small>
+                        Enseignant
+                    </small>
+                </div>
+            </div>
+            <div class="prof">
+                <img src="./assets/images/test.jpg">
+                <div class="prof-info">
+                    Nom & Prénom
+                    <small>
+                        Enseignant
+                    </small>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- End Profs De Sagesse -->
 
-    <section class="work-section" id="work-section">
-        <div class="work-header">
-          <div class="work-title">
-            <i class="fas fa-star"></i> My Work
-          </div>
-          <h2>Take A Look On Something Unique, Creative And Modern</h2>
-          <p>Dive into our work gallery to discover a selection of the websites we've developed. From responsive designs to custom functionalities, these examples showcase our expertise in delivering tailored web solutions that meet diverse client needs and drive results.</p>
+    <!-- Start Avis Des Clients -->
+    <section class="testimonials section">
+        <div class="section-header">
+            <h1>
+                Les Avis De Nos Clients
+            </h1>
+            <p>
+                Les avis de nos élèves et parents reflètent notre engagement. Ils témoignent de la qualité de l'enseignement, de l'environnement chaleureux et de la réussite. À "Sagesse", la satisfaction est une priorité.
+            </p>
         </div>
-      
-        <div class="work-grid">
-          
+        <div class="section-content">
+            <button class="prev">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <div class="testimonials-carousel">
+                <div class="testimonial">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="test-content">
+                        Une école à l’écoute des élèves, avec un encadrement très professionnel !!
+                    </p>
+                    <div class="client-info">
+                         <img src="./assets/images/test.jpg">
+                         <div>
+                            Francis Towe
+                            <small>
+                                Parent
+                            </small>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="test-content">
+                        Une école où l’innovation pédagogique est au cœur des méthodes d’enseignement.
+                    </p>
+                    <div class="client-info">
+                         <img src="./assets/images/test.jpg">
+                         <div>
+                            Francis Towe
+                            <small>
+                                Parent
+                            </small>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="test-content">
+                        L’ambiance y est très conviviale. Mon fils s’y sent bien, ce qui motive son apprentissage. Les activités proposées sont variées et participent à son épanouissement global.
+                    </p>
+                    <div class="client-info">
+                         <img src="./assets/images/test.jpg">
+                         <div>
+                            Francis Towe
+                            <small>
+                                Parent
+                            </small>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
         </div>
     </section>
+    <!-- End Avis Des Clients -->
 
-    <section class="testimonials-section" id="testimonials-section">
-        <div class="testimonials-header">
-          <div class="testimonials-title">
-            <i class="fas fa-star"></i> Testimonials
-          </div>
-          <h2>See How Satisfied Our Clients Are !</h2>
-          <p>Don't just take our word for it! See what our satisfied clients have to say about their experiences with us. Their success is our success, and we're proud to share their stories.</p>
-        </div>
-        
-        <div class="clients-pictures">
-            
-        </div>
 
-        <div class="testimonials-grid">
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="credit">
-            Made With <i class="fa">&#xf004;</i> By 
-            <a href="#" target="_blank" class="ig-link">Aziz Berhouma</a>
-        </div>
-    </footer>
-    <script src="script.js" type="module"></script>
-</body>
-</html>
