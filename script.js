@@ -1,22 +1,19 @@
-const tl = gsap.timeline({
-    delay: 0.5,
+const nextButton = document.querySelector("button.next")
+const prevButton = document.querySelector("button.prev")
+const testimonialsContainer = document.querySelector(".testimonials-carousel")
+
+nextButton.addEventListener("click", (traget) => {
+    testimonialsContainer.scrollBy({
+        left: 100,
+        top: 0,
+        behavior: "smooth"
+    })
 })
 
-tl.from('main .title', {
-    x: "-150%",
-}).from('main .stats', {
-    x: "-150%",
-}).to('main a', {
-    opacity: 1,
-}).from('header > .links', {
-    y: -300,
-}).from('main .lady-bug', {
-    x: 200,
-    delay: 0.5,
-})
-
-gsap.to('.scroll-down', {
-    y: 8,
-    repeat: -1,
-    yoyo: true,
+prevButton.addEventListener("click", (traget) => {
+    testimonialsContainer.scrollBy({
+        left: -100,
+        top: 0,
+        behavior: "smooth"
+    })
 })
