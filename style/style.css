@@ -604,7 +604,7 @@ section.testimonials .section-content .testimonials-carousel {
     flex-wrap: nowrap;
     gap: 32px;
     justify-content: flex-start;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 
 section.testimonials .section-content .testimonials-carousel::-webkit-scrollbar {
@@ -619,7 +619,7 @@ section.testimonials .section-content .testimonial {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    min-width: 300px;
+    min-width: 270px;
 }
 
 section.testimonials .section-content .testimonial > i {
@@ -652,5 +652,11 @@ section.testimonials .section-content .testimonial > .client-info > div small {
 section.testimonials .section-content .testimonial img {
     height: 30px;
     width: 30px;
+}
+
+@media (max-width: 768px) {
+    section.testimonials .section-content > button {
+        display: none;
+    }
 }
 /* End Avis Section */
