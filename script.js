@@ -38,3 +38,280 @@ autoScrollTest = setInterval(() => {
     }
 
 }, 5)
+
+
+const activities = [
+
+    {
+        activityName: "Activitée 1",
+        activityDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+    },
+    {
+        activityName: "Activitée 2",
+        activityDesc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem..."
+    },
+    {
+        activityName: "Activitée 3",
+        activityDesc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse..."
+    },
+    {
+        activityName: "Activitée 4",
+        activityDesc: "At vero eos et accusamus et iusto odio dignissimos ducimus..."
+    }
+]
+
+const activitySection = document.getElementById("activities-section");
+
+activities.forEach(activity => {
+    const card = document.createElement("div");
+    card.className = "activity-card";
+
+    const title = document.createElement("div");
+    title.className = "activity-title";
+    title.textContent = activity.activityName;
+
+    const desc = document.createElement("div");
+    desc.className = "activity-description";
+    desc.textContent = activity.activityDesc;
+
+    card.appendChild(title);
+    card.appendChild(desc);
+
+    activitySection.appendChild(card);
+});
+
+const clubs = [
+    
+    {
+        clubImage: "./assets/images/test.jpg",
+        clubName: "Club De Scratch",
+        clubDesc: "Les élèves apprennent à coder avec Scratch de manière ludique et créative."
+    },
+    {
+        clubImage: "./assets/images/test.jpg",
+        clubName: "Club De Robotique",
+        clubDesc: "Construire et programmer des robots avec Arduino et autres kits techniques."
+    },
+    {
+        clubImage: "./assets/images/test.jpg",
+        clubName: "Club De Théâtre",
+        clubDesc: "Un espace pour exprimer la créativité à travers le jeu de rôle et la mise en scène."
+    },
+]
+
+const clubsSection = document.getElementById("clubs-section");
+
+    clubs.forEach((club, index) => {
+        const clubCard = document.createElement("div");
+        clubCard.className = `club-${index + 1} club`;
+
+        const imageDiv = document.createElement("div");
+        imageDiv.className = "club-image";
+
+        const img = document.createElement("img");
+        img.src = club.clubImage;
+        img.alt = "Club Image";
+
+        imageDiv.appendChild(img);
+
+        const descDiv = document.createElement("div");
+        descDiv.className = "club-desc";
+
+        const title = document.createElement("h2");
+        title.textContent = club.clubName;
+
+        const desc = document.createElement("p");
+        desc.textContent = club.clubDesc;
+
+        descDiv.appendChild(title);
+        descDiv.appendChild(desc);
+
+        clubCard.appendChild(imageDiv);
+        clubCard.appendChild(descDiv);
+
+        clubsSection.appendChild(clubCard);
+    });
+
+
+const profs = [
+    
+    {
+      image: "./assets/images/test.jpg",
+      name: "Nom & Prénom",
+      tag: "Enseignant"
+    },
+    {
+      image: "./assets/images/test.jpg",
+      name: "Mme Amina Ben Ali",
+      tag: "Enseignante de Mathématiques"
+    },
+    {
+      image: "./assets/images/test.jpg",
+      name: "M. Karim Trabelsi",
+      tag: "Professeur de Physique"
+    },
+    {
+      image: "./assets/images/test.jpg",
+      name: "Mme Salma Ferchichi",
+      tag: "Enseignante de Français"
+    }
+
+]
+
+const profsSection = document.getElementById("profs-section");
+
+profs.forEach(prof => {
+    const profCard = document.createElement("div");
+    profCard.className = "prof";
+
+    const img = document.createElement("img");
+    img.src = prof.image;
+    img.alt = prof.name;
+
+    const infoDiv = document.createElement("div");
+    infoDiv.className = "prof-info";
+    infoDiv.textContent = prof.name;
+
+    const smallTag = document.createElement("small");
+    smallTag.textContent = prof.tag;
+
+    infoDiv.appendChild(document.createElement("br"));
+    infoDiv.appendChild(smallTag);
+
+    profCard.appendChild(img);
+    profCard.appendChild(infoDiv);
+
+    profsSection.appendChild(profCard);
+});
+
+const testimonials = [
+    
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Une école à l’écoute des élèves, avec un encadrement très professionnel !!",
+      clientName: "Francis Towe",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Les enseignants sont très impliqués et disponibles.",
+      clientName: "Sonia Ben Amar",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Ambiance très conviviale et équipements modernes.",
+      clientName: "Mourad Salah",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Un cadre idéal pour l’apprentissage et le développement personnel.",
+      clientName: "Nadia Ben Youssef",
+      clientTag: "Parent"
+    }
+
+]
+
+const testimonialsSection = document.getElementById("testimonials-section");
+
+  testimonials.forEach(item => {
+    const testimonialDiv = document.createElement("div");
+    testimonialDiv.className = "testimonial";
+
+    const quoteIcon = document.createElement("i");
+    quoteIcon.className = "fa-solid fa-quote-left";
+
+    const contentP = document.createElement("p");
+    contentP.className = "test-content";
+    contentP.textContent = item.testimonial;
+
+    const clientInfoDiv = document.createElement("div");
+    clientInfoDiv.className = "client-info";
+
+    const img = document.createElement("img");
+    img.src = item.clientImage;
+    img.alt = item.clientName;
+
+    const clientDetailsDiv = document.createElement("div");
+    clientDetailsDiv.textContent = item.clientName;
+
+    const clientTagSmall = document.createElement("small");
+    clientTagSmall.textContent = item.clientTag;
+
+    clientDetailsDiv.appendChild(document.createElement("br"));
+    clientDetailsDiv.appendChild(clientTagSmall);
+
+    clientInfoDiv.appendChild(img);
+    clientInfoDiv.appendChild(clientDetailsDiv);
+
+    testimonialDiv.appendChild(quoteIcon);
+    testimonialDiv.appendChild(contentP);
+    testimonialDiv.appendChild(clientInfoDiv);
+
+    testimonialsSection.appendChild(testimonialDiv);
+});
+
+const aboutSagesse = {
+    desc: "",
+    stats : [
+        {
+            num: 200,
+            par: "Eléves Qui Ont Essayé Sgaesse",
+        },
+        
+        {
+            num: 7,
+            par: "Profs Expérimentés",
+        },
+
+        {
+            num: 10,
+            par: "Clubs Pour Une Variété D'Activitées",
+        },
+    ]
+}
+
+const statsSection = document.querySelector("section.stats")
+
+aboutSagesse.stats.forEach((stat, index) => {
+    const statCard = document.createElement("div");
+    statCard.classList.add(`stat-${index + 1}`);
+
+    const statNum = document.createElement("span");
+    statNum.textContent = `+${stat.num}`
+    statCard.appendChild(statNum)
+
+    const statDesc = document.createElement("p");
+    statDesc.textContent = stat.par;
+    statCard.appendChild(statDesc);
+
+    statsSection.appendChild(statCard);
+})
+
+
+
+const playButton = document.querySelector("section.a-propos-sagesse .play-button")
+const aboutVideo = document.querySelector('section.a-propos-sagesse .video video');
+
+playButton.addEventListener("click", (e) => {
+    aboutVideo.play().then(() => {
+        playButton.style.display = "none";
+        aboutVideo.controls = true;
+    });
+});
+
+let tl = gsap.timeline({
+    scrollTrigger : {
+        trigger: '#activities-section',
+    },
+    duration: 2,
+})
+
+tl.fromTo('.activity-card', {
+    x: -1000,
+    ease: "bounce.inOut",
+}, {
+    x: 0,
+    ease: "bounce.inOut",
+})
