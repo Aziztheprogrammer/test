@@ -439,6 +439,7 @@ section.activities > .section-content .activity-card {
     flex-direction: column;
     gap: 16px;
     transition: all ease var(--transition-duration);
+    transform: translateX(-500px);
 }
 
 section.activities > .section-content .activity-card:hover {
@@ -494,6 +495,7 @@ section.clubs .section-content > .club {
     gap: 32px;
     max-width: 996px;
     margin: auto;
+    opacity: 0;
 }
 
 section.clubs .section-content > .club .club-desc {

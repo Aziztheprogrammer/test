@@ -289,6 +289,8 @@ aboutSagesse.stats.forEach((stat, index) => {
     statsSection.appendChild(statCard);
 })
 
+// Stats Animation
+
 
 
 const playButton = document.querySelector("section.a-propos-sagesse .play-button")
@@ -301,17 +303,29 @@ playButton.addEventListener("click", (e) => {
     });
 });
 
-let tl = gsap.timeline({
+let tl1 = gsap.timeline({
     scrollTrigger : {
         trigger: '#activities-section',
     },
-    duration: 2,
 })
 
-tl.fromTo('.activity-card', {
-    x: -1000,
-    ease: "bounce.inOut",
-}, {
+tl1.to('.activity-card', {
     x: 0,
-    ease: "bounce.inOut",
+    ease: "power4.inOut",
+    stagger: 0.5,
+    duration: 1,
+})
+
+
+let tl2 = gsap.timeline({
+    scrollTrigger : {
+        trigger: '#clubs-section',
+    },
+})
+
+tl2.to('.club', {
+    opacity: 1,
+    ease: "power4.inOut",
+    stagger: 0.5,
+    duration: 1,
 })
