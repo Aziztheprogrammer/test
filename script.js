@@ -4,7 +4,7 @@ const testimonialsContainer = document.querySelector(".testimonials-carousel")
 
 nextButton.addEventListener("click", (target) => {
     testimonialsContainer.scrollBy({
-        left: 100,
+        left: 200,
         top: 0,
         behavior: "smooth"
     })
@@ -12,32 +12,34 @@ nextButton.addEventListener("click", (target) => {
 
 prevButton.addEventListener("click", (target) => {
     testimonialsContainer.scrollBy({
-        left: -100,
+        left: -200,
         top: 0,
         behavior: "smooth"
     })
 })
 
-let x = 2
+if (window.innerWidth < 769) {
 
-autoScrollTest = setInterval(() => {
-    testimonialsContainer.scrollBy({
-        left: x,
-        top: 0,
-        behavior: "smooth"
-    })
+    let x = 2
 
-    testimonialsContainer.onscrollend = (event) => {
-        // console.log("helooooo")
-        // clearInterval(autoScrollTest)
-        x = -2
-    }
+    autoScrollTest = setInterval(() => {
+        testimonialsContainer.scrollBy({
+            left: x,
+            top: 0,
+            behavior: "smooth"
+        })
 
-    if (testimonialsContainer.scrollLeft == 0) {
-        x = 2
-    }
+        testimonialsContainer.onscrollend = (event) => {
+            x = -2
+        }
 
-}, 5)
+        if (testimonialsContainer.scrollLeft == 0) {
+            x = 2
+        }
+
+    }, 5)
+
+}
 
 
 const activities = [
@@ -209,6 +211,30 @@ const testimonials = [
       testimonial: "Un cadre idéal pour l’apprentissage et le développement personnel.",
       clientName: "Nadia Ben Youssef",
       clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Une école à l’écoute des élèves, avec un encadrement très professionnel !!",
+      clientName: "Francis Towe",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Les enseignants sont très impliqués et disponibles.",
+      clientName: "Sonia Ben Amar",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Ambiance très conviviale et équipements modernes.",
+      clientName: "Mourad Salah",
+      clientTag: "Parent"
+    },
+    {
+      clientImage: "./assets/images/test.jpg",
+      testimonial: "Un cadre idéal pour l’apprentissage et le développement personnel.",
+      clientName: "Nadia Ben Youssef",
+      clientTag: "Parent"
     }
 
 ]
@@ -279,7 +305,7 @@ aboutSagesse.stats.forEach((stat, index) => {
     statCard.classList.add(`stat-${index + 1}`);
 
     const statNum = document.createElement("span");
-    statNum.textContent = `+${stat.num}`
+    statNum.textContent = 0
     statCard.appendChild(statNum)
 
     const statDesc = document.createElement("p");
@@ -290,8 +316,34 @@ aboutSagesse.stats.forEach((stat, index) => {
 })
 
 // Stats Animation
+const stats = document.querySelectorAll("section.stats > div span");
 
+let statsAnimation = function () {
+    const targetPosition = statsSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    let inView = false;
 
+    if (targetPosition < windowHeight) {
+        inView = true;
+
+        stats.forEach((stat, index) => {
+
+            let statsCounter = setInterval(() => {
+                let number = parseInt(stat.textContent);
+                stat.textContent = `+${number + 1}`;
+
+                if (number == aboutSagesse.stats[index].num - 1) {
+                    clearInterval(statsCounter)
+                }
+            }, 2000 / aboutSagesse.stats[index].num)
+        })
+    }
+    if (inView) {
+        window.removeEventListener('scroll', statsAnimation);
+    }    
+}
+
+window.addEventListener('scroll', statsAnimation)
 
 const playButton = document.querySelector("section.a-propos-sagesse .play-button")
 const aboutVideo = document.querySelector('section.a-propos-sagesse .video video');
@@ -309,12 +361,21 @@ let tl1 = gsap.timeline({
     },
 })
 
-tl1.to('.activity-card', {
-    x: 0,
-    ease: "power4.inOut",
-    stagger: 0.5,
-    duration: 1,
-})
+if (window.innerWidth < 769) {
+    tl1.to('.activity-card', {
+        x: 0,
+        ease: "back.out",
+        stagger: 0.5,
+        duration: 1,
+    })
+} else {
+    tl1.to('.activity-card', {
+        scale: 1,
+        ease: "bounce.out",
+        stagger: 0.3,
+        duration: 0.5,
+    })
+}
 
 
 let tl2 = gsap.timeline({
