@@ -87,23 +87,25 @@ const clubs = [
     {
         clubImage: "./assets/images/test.jpg",
         clubName: "Club De Scratch",
-        clubDesc: "Les élèves apprennent à coder avec Scratch de manière ludique et créative."
+        clubDesc: "Un atelier ludique où les élèves apprennent la programmation créative en réalisant des jeux, des histoires interactives et des animations, tout en développant logique et créativité."
     },
     {
         clubImage: "./assets/images/test.jpg",
         clubName: "Club De Robotique",
-        clubDesc: "Construire et programmer des robots avec Arduino et autres kits techniques."
+        clubDesc: "Un lieu d’innovation où les élèves découvrent la programmation, l’électronique et la mécanique, tout en développant leur esprit scientifique et leur sens du travail collaboratif."
     },
     {
         clubImage: "./assets/images/test.jpg",
         clubName: "Club De Théâtre",
-        clubDesc: "Un espace pour exprimer la créativité à travers le jeu de rôle et la mise en scène."
-    },
+        clubDesc: "Un espace d’expression et de créativité où nos élèves développent confiance, imagination et esprit d’équipe à travers des ateliers et des représentations artistiques."
+    }
 ]
 
 const clubsSection = document.getElementById("clubs-section");
 
     clubs.forEach((club, index) => {
+        if (index > 2) return;
+
         const clubCard = document.createElement("div");
         clubCard.className = `club-${index + 1} club`;
 
@@ -387,6 +389,19 @@ let tl2 = gsap.timeline({
 tl2.to('.club', {
     opacity: 1,
     ease: "power4.inOut",
-    stagger: 0.5,
+    stagger: 0.75,
+    duration: 1,
+})
+
+let tl3 = gsap.timeline({
+    scrollTrigger : {
+        trigger: '#profs-section',
+    },
+})
+
+tl2.to('.prof', {
+    opacity: 1,
+    ease: "power4.inOut",
+    stagger: 0.75,
     duration: 1,
 })
