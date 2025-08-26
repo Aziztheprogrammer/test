@@ -45,20 +45,20 @@ if (window.innerWidth < 769) {
 const activities = [
 
     {
-        activityName: "Activitée 1",
-        activityDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        activityName: "Des Clubs Variés",
+        activityDesc: "Notre école offre plusieurs clubs qui encouragent les élèves à découvrir leurs talents, partager leurs passions et renforcer l’esprit d’équipe."
     },
     {
-        activityName: "Activitée 2",
-        activityDesc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem..."
+        activityName: "Cours Supplémentaires",
+        activityDesc: "Notre école propose aussi des cours supplémentaires pour aider les élèves à renforcer leurs acquis et progresser à leur rythme."
     },
     {
-        activityName: "Activitée 3",
-        activityDesc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse..."
+        activityName: "Cours En Anglais & Français",
+        activityDesc: "Notre école organise des cours de langue pour enrichir les compétences des élèves et favoriser l’ouverture sur le monde."
     },
     {
-        activityName: "Activitée 4",
-        activityDesc: "At vero eos et accusamus et iusto odio dignissimos ducimus..."
+        activityName: "Cours En Informatique",
+        activityDesc: "Notre école propose des cours d’informatique pour initier les élèves aux outils numériques et développer leurs compétences technologiques."
     }
 ]
 
@@ -85,17 +85,17 @@ activities.forEach(activity => {
 const clubs = [
     
     {
-        clubImage: "./assets/images/test.jpg",
+        clubImage: "./assets/images/club-scratch.jpg",
         clubName: "Club De Scratch",
         clubDesc: "Un atelier ludique où les élèves apprennent la programmation créative en réalisant des jeux, des histoires interactives et des animations, tout en développant logique et créativité."
     },
     {
-        clubImage: "./assets/images/test.jpg",
+        clubImage: "./assets/images/club-robotique.jpg",
         clubName: "Club De Robotique",
         clubDesc: "Un lieu d’innovation où les élèves découvrent la programmation, l’électronique et la mécanique, tout en développant leur esprit scientifique et leur sens du travail collaboratif."
     },
     {
-        clubImage: "./assets/images/test.jpg",
+        clubImage: "./assets/images/club-theatre.jpg",
         clubName: "Club De Théâtre",
         clubDesc: "Un espace d’expression et de créativité où nos élèves développent confiance, imagination et esprit d’équipe à travers des ateliers et des représentations artistiques."
     }
@@ -140,22 +140,22 @@ const clubsSection = document.getElementById("clubs-section");
 const profs = [
     
     {
-      image: "./assets/images/test.jpg",
-      name: "Nom & Prénom",
-      tag: "Enseignant"
+      image: "./assets/images/prof-1.jpg",
+      name: "Mme Emna",
+      tag: "Directrice"
     },
     {
-      image: "./assets/images/test.jpg",
+      image: "./assets/images/prof-2.jpg",
       name: "Mme Amina Ben Ali",
       tag: "Enseignante de Mathématiques"
     },
     {
-      image: "./assets/images/test.jpg",
-      name: "M. Karim Trabelsi",
+      image: "./assets/images/prof-3.jpg",
+      name: "Mme Karima Trabelsi",
       tag: "Professeur de Physique"
     },
     {
-      image: "./assets/images/test.jpg",
+      image: "./assets/images/prof-4.jpg",
       name: "Mme Salma Ferchichi",
       tag: "Enseignante de Français"
     }
@@ -191,49 +191,49 @@ profs.forEach(prof => {
 const testimonials = [
     
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Une école à l’écoute des élèves, avec un encadrement très professionnel !!",
       clientName: "Francis Towe",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Les enseignants sont très impliqués et disponibles.",
       clientName: "Sonia Ben Amar",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Ambiance très conviviale et équipements modernes.",
       clientName: "Mourad Salah",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Un cadre idéal pour l’apprentissage et le développement personnel.",
       clientName: "Nadia Ben Youssef",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Une école à l’écoute des élèves, avec un encadrement très professionnel !!",
       clientName: "Francis Towe",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Les enseignants sont très impliqués et disponibles.",
       clientName: "Sonia Ben Amar",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Ambiance très conviviale et équipements modernes.",
       clientName: "Mourad Salah",
       clientTag: "Parent"
     },
     {
-      clientImage: "./assets/images/test.jpg",
+      clientImage: "",
       testimonial: "Un cadre idéal pour l’apprentissage et le développement personnel.",
       clientName: "Nadia Ben Youssef",
       clientTag: "Parent"
@@ -258,7 +258,12 @@ const testimonialsSection = document.getElementById("testimonials-section");
     clientInfoDiv.className = "client-info";
 
     const img = document.createElement("img");
-    img.src = item.clientImage;
+
+    if (item.clientImage == "") {
+        img.src = "assets/images/inconnu.png";
+    } else {
+        img.src = item.clientImage;
+    }
     img.alt = item.clientName;
 
     const clientDetailsDiv = document.createElement("div");
@@ -297,7 +302,11 @@ const aboutSagesse = {
             num: 10,
             par: "Clubs Pour Une Variété D'Activitées",
         },
-    ]
+    ],
+    socialLinks: {
+        facebookLink: "https://www.facebook.com/p/Sagesse-100063761066200/",
+        instagramLink: "https://www.instagram.com/sagesse_s_s_scolaire/",
+    }
 }
 
 const statsSection = document.querySelector("section.stats")
@@ -356,6 +365,19 @@ playButton.addEventListener("click", (e) => {
         aboutVideo.controls = true;
     });
 });
+
+const facebookLinks = document.querySelectorAll(".facebook-link");
+const instagramLinks = document.querySelectorAll(".instagram-link");
+
+facebookLinks.forEach((link) => {
+    link.href = aboutSagesse.socialLinks.facebookLink;
+    link.target = "_blank";
+})
+
+instagramLinks.forEach((link) => {
+    link.href = aboutSagesse.socialLinks.instagramLink;
+    link.target = "_blank";
+})
 
 let tl1 = gsap.timeline({
     scrollTrigger : {

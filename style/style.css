@@ -765,3 +765,37 @@ section.testimonials .section-content .testimonial img {
     }
 }
 /* End Avis Section */
+
+/* Start Footer Section */
+
+footer {
+    padding: 32px var(--section-x-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: var(--section-color);
+}
+
+footer .watermark {
+    font-size: 0.75rem;
+}
+
+footer .watermark a {
+    font-weight: 600;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* End Footer Section */
