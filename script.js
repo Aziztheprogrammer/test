@@ -4,7 +4,7 @@ const testimonialsContainer = document.querySelector(".testimonials-carousel")
 
 nextButton.addEventListener("click", (target) => {
     testimonialsContainer.scrollBy({
-        left: 200,
+        left: 330,
         top: 0,
         behavior: "smooth"
     })
@@ -12,34 +12,28 @@ nextButton.addEventListener("click", (target) => {
 
 prevButton.addEventListener("click", (target) => {
     testimonialsContainer.scrollBy({
-        left: -200,
+        left: -330,
         top: 0,
         behavior: "smooth"
     })
 })
 
-if (window.innerWidth < 769) {
+const heroPictures = [
+    "./assets/images/prof-1.jpg",
+    "./assets/images/prof-2.jpg",
+    "./assets/images/prof-3.jpg"
+]
 
-    let x = 2
+const heroSection = document.querySelector("main");
 
-    autoScrollTest = setInterval(() => {
-        testimonialsContainer.scrollBy({
-            left: x,
-            top: 0,
-            behavior: "smooth"
-        })
-
-        testimonialsContainer.onscrollend = (event) => {
-            x = -2
-        }
-
-        if (testimonialsContainer.scrollLeft == 0) {
-            x = 2
-        }
-
-    }, 5)
-
-}
+var i = 0;
+setInterval(function() {
+      heroSection.style.backgroundImage = "url(" + heroPictures[i] + ")";
+      i = i + 1;
+      if (i == heroPictures.length) {
+        i =  0;
+      }
+}, 5000);
 
 
 const activities = [
@@ -421,9 +415,51 @@ let tl3 = gsap.timeline({
     },
 })
 
-tl2.to('.prof', {
+tl3.to('.prof', {
     opacity: 1,
     ease: "power4.inOut",
     stagger: 0.75,
     duration: 1,
 })
+
+let tl4 = gsap.timeline({
+    scrollTrigger : {
+        trigger: '#testimonials-section',
+    },
+})
+
+tl4.to('.testimonial', {
+    opacity: 1,
+    ease: "power4.inOut",
+    stagger: 0.75,
+    duration: 1,
+})
+
+
+function emailSend() {
+ const userName = document.getElementById('name').value;
+ const sujet = document.getElementById('sujet').value;
+ const email = document.getElementById('email').value;
+
+ const messageBody = `
+    <h3>New Form Submission</h3>
+    <p><strong>Name:</strong> ${userName}</p>
+    <p><strong>Phone:</strong> ${sujet}</p>
+    <p><strong>Email:</strong> ${email}</p>
+  `;
+
+Email.send({
+    Host : "s1.maildns.net",
+    Username : "aziz.berhouma8@gmail.com",
+    Password : "9FE11DF2A47A31CB991D2D46F83CB2E20A60",
+    To : 'aziz.berhouma8@gmail.com',
+    From : email,
+    Subject : sujet,
+    Body : messageBody
+}).then(
+  message => alert("yes !!")
+);
+
+}
+
+document.querySelector("#submit").onclick = emailSend;

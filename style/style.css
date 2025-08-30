@@ -57,13 +57,14 @@ h1, h2 {
     font-weight: 500;
     text-transform: uppercase;
     transition: all ease var(--transition-duration);
-    margin: 64px 0px;
+    margin: 48px 0px;
     border: var(--second-color) 1px solid;
 }
 
 .link-button:hover {
-    background-color: transparent;
-    color: var(--second-color);
+    background-color: white;
+    color: #000;
+    border: #000 1px solid;
 }
 
 @media (max-width: 768px) {
@@ -121,7 +122,7 @@ section .section-link {
 
 @media (max-width: 768px) {
     section > .section-header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     section > .section-header p {
@@ -447,6 +448,7 @@ section.a-propos-sagesse .section-content .video .play-button {
 
     section.a-propos-sagesse .section-content video {
         width: 100%;
+        aspect-ratio: 4/3;
     }
 
 
@@ -519,7 +521,7 @@ section.stats > div:not(:last-child)::after {
 section.activities > .section-content {
     display: grid;
     max-width: 996px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
     align-content: center;
 }
@@ -695,6 +697,7 @@ section.testimonials .section-content {
     align-items: center;
     justify-content: center;
     gap: 32px;
+    max-width: 992px;
 }
 
 section.testimonials .section-content > button {
@@ -710,6 +713,8 @@ section.testimonials .section-content .testimonials-carousel {
     gap: 32px;
     justify-content: flex-start;
     overflow-x: scroll;
+    position: relative;
+    padding: 16px;
 }
 
 section.testimonials .section-content .testimonials-carousel::-webkit-scrollbar {
@@ -725,6 +730,12 @@ section.testimonials .section-content .testimonial {
     flex-direction: column;
     gap: 16px;
     min-width: 270px;
+    transition: 0.25s ease all;
+    opacity: 0;
+}
+
+section.testimonials .section-content .testimonial:hover {
+    transform: scale(1.05);
 }
 
 section.testimonials .section-content .testimonial > i {
@@ -763,8 +774,49 @@ section.testimonials .section-content .testimonial img {
     section.testimonials .section-content > button {
         display: none;
     }
+    
+    section.testimonials .section-content .testimonials-carousel {
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
 }
 /* End Avis Section */
+
+/* Start Contact Section */
+
+section.contact-us .section-content {
+    max-width: 992px;
+}
+
+section.contact-us .section-content form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+}
+
+section.contact-us .section-content form label {
+    margin-bottom: 8px;
+}
+
+section.contact-us .section-content form label span {
+    color: red;
+}
+
+section.contact-us .section-content form input {
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: #dfdfdff6;
+    border: none;
+    max-width: 480px;
+    border-radius: 4px;
+}
+
+section.contact-us .section-content form input[id="sujet"] {
+    min-height: 180px;
+}
+
+/* End Contact Section */
 
 /* Start Footer Section */
 

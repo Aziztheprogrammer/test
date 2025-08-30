@@ -221,7 +221,19 @@
             </p>
         </div>
         <div class="section-content" id = "contact-us-section">
-    
+            <form>
+                <label for="name">Nom & Prénom :<span>*</span></label>
+                <input type="text" id="name">
+
+                <label for="email">E-mail :<span>*</span></label>
+                <input type="email" id="email">
+
+                <label for="sujet">Sujet : <span>*</span></label>
+                <input type="text" id="sujet">
+
+                <!-- <input type="submit" id="submit"> -->
+                <button id="submit">Submit</button>
+            </form>
         </div>
     </section>
     <!-- End Contact Us Section -->
@@ -245,6 +257,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 
