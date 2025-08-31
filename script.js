@@ -19,9 +19,9 @@ prevButton.addEventListener("click", (target) => {
 })
 
 const heroPictures = [
-    "./assets/images/prof-1.jpg",
-    "./assets/images/prof-2.jpg",
-    "./assets/images/prof-3.jpg"
+    "./assets/images/hero-0.jpg",
+    "./assets/images/hero-1.jpg",
+    "./assets/images/hero-2.jpg"
 ]
 
 const heroSection = document.querySelector("main");
@@ -437,28 +437,15 @@ tl4.to('.testimonial', {
 
 
 function emailSend() {
- const userName = document.getElementById('name').value;
- const sujet = document.getElementById('sujet').value;
- const email = document.getElementById('email').value;
+ let parms = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('sujet').value,
+ }
 
- const messageBody = `
-    <h3>New Form Submission</h3>
-    <p><strong>Name:</strong> ${userName}</p>
-    <p><strong>Phone:</strong> ${sujet}</p>
-    <p><strong>Email:</strong> ${email}</p>
-  `;
-
-Email.send({
-    Host : "s1.maildns.net",
-    Username : "aziz.berhouma8@gmail.com",
-    Password : "9FE11DF2A47A31CB991D2D46F83CB2E20A60",
-    To : 'aziz.berhouma8@gmail.com',
-    From : email,
-    Subject : sujet,
-    Body : messageBody
-}).then(
-  message => alert("yes !!")
-);
+emailjs.send("service_4sf1bk7", "template_12qbtll", parms).then(
+    alert(email)
+)
 
 }
 

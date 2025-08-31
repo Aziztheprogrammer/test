@@ -20,6 +20,10 @@
     padding: 0px;
     scroll-behavior: smooth;
     outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -278,7 +282,7 @@ main {
     z-index: 1;
     width: 100%;
     height: calc(100dvh - 70.08px);
-    background: url("../assets/images/main-image.jpg") center no-repeat;
+    background: url("../assets/images/hero-1.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -779,6 +783,10 @@ section.testimonials .section-content .testimonial img {
         flex-wrap: wrap;
         overflow-x: hidden;
     }
+
+    section.testimonials .section-content .testimonial {
+        width: 100%;
+    }
 }
 /* End Avis Section */
 
@@ -793,6 +801,8 @@ section.contact-us .section-content form {
     display: flex;
     flex-direction: column;
     font-size: 0.75rem;
+    max-width: 480px;
+    margin: auto;
 }
 
 section.contact-us .section-content form label {
