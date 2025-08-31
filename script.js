@@ -18,6 +18,12 @@ prevButton.addEventListener("click", (target) => {
     })
 })
 
+const screenLoader = document.querySelector(".screen-loader");
+
+setTimeout(() => {
+    screenLoader.style.display = "none";
+}, 2000)
+
 const heroPictures = [
     "./assets/images/hero-0.jpg",
     "./assets/images/hero-1.jpg",
